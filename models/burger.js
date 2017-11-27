@@ -1,19 +1,16 @@
 var orm = require('../config/orm.js');
 var burger = {
 	updateBurger: function(name) {
-		if(name !== "") {
-			orm.updateOne(name);
-		}
+		orm("updateOne", name);
 	}
 	addBurger: function(name) {
-		if(name !== "") {
-			orm.insertOne(name)
-		}
+		orm("insertOne", name);
 	}
 	selectAll: function() {
-		orm.selectAll();
+		orm("selectAll");
 	}
 }
+module.exports = burger;
 // * Inside your `burger` directory, create a folder named `models`.
 
 //   * In `models`, make a `burger.js` file.
