@@ -7,20 +7,39 @@
 	<div class = 'row'>
 		<div class = 'col-sm-4'>
 			<ul id = 'uneatenList'>
-				<li>New Burgers</li>
+				{{#each burgers}}
+				<li>
+					<span>{{name}}
+						<button data-burgerName= "{{name}}" class="devourBurger">Devour</button>
+					</span>
+				</li>		
+				{{/each}}		
 			</ul>
 		</div>
 		<div class = 'col-sm-4'>
 			<h1>Please submit your burger</h1>
-			<textarea placeholder="Type your burger name here."></textarea>
+			<textarea id="newBurger" placeholder="Type your burger name here." style = "width: 100%; height: 40px"></textarea>
 			<button type="submit" id="submit" class='btn btn-submit'>Submit Your Burger</button>
 		</div>
 		<div class= 'col-sm-4'>
+			<h3>Devoured Burgers</h3>
 			<ul id = 'eatenList'>
-				<li>Devoured Burgers</li>
 			</ul>
 		</div>
 	</div>
 </div>
 <script type="text/javascript">
+	$("#submit").on('click', function(event) {
+		event.preventDefault();
+		var newBurger = $('#newBurger').val();
+		$.ajax("/", {
+			type: POST,
+			data: newBurger
+		}).then(function() {
+			console.log("new burger named " + newBurger + " added");
+		})
+	});
+	$(".devour")
+
+
 
