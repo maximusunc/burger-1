@@ -39,7 +39,17 @@
 			console.log("new burger named " + newBurger + " added");
 		})
 	});
-	$(".devour")
+	$(".devourBurger").on('click', function() {
+		var id = $(this).data('burgerName');
+		$.ajax('/', {
+			type: "DELETE"
+		}).then(function() {
+			console.log("deleted " id;);
+			var newLi = $("<li>");
+			newLi.text(id).appendTo('#eatenList');
+		})
+
+	})
 
 
 
