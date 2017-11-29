@@ -1,7 +1,8 @@
 <li>
-	<span id ="{{name}}">
+	<span id ="{{id}}">
+		{{burger_name}}
 		{{#unless devoured}}
-			<button class = "devour" data-id="{{id}}" data-devoured="{{"devoured"}}">Devour Burger</button>
+			<button class = "devourBurger" data-id="{{id}}" data-devoured="{{"devoured"}}">Devour Burger</button>
 		{{/unless}}
 	</span>
 </li>

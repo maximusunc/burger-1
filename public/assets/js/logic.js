@@ -13,9 +13,9 @@ $(function() {
 				location.reload();
 		})
 	});
-	$(".devourBurger").on('click', function() {
-		var name = $(this).data('burgerName');
-		$.ajax('/', {
+	$(".devourBurger").on('click', function(event) {
+		var id = $(this).data('id');
+		$.ajax('/api/burgers/' + id, {
 			type: "PUT"
 		}).then(function() {
 			console.log("devoured ", name);

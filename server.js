@@ -13,7 +13,7 @@ app.set("view engine", "handlebars");
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(express.static("public"));
-app.use("/index", routes);
+app.use("/", routes);
 
 app.listen(PORT, function() {
   console.log("listening on port", PORT)
