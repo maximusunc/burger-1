@@ -18,7 +18,7 @@ $(function() {
 		$.ajax('/api/burgers/' + id, {
 			type: "PUT"
 		}).then(function() {
-			console.log("devoured ", name);
+			console.log("devoured ", id);
 		});
 	})
 
