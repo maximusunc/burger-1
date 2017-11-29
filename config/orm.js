@@ -17,5 +17,4 @@ module.exports = function(method, param, callback) {
 			break;
 		}
 	connection.query(query, [param], queryFunction(err,res));
-	}
 }
