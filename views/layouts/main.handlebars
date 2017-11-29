@@ -42,13 +42,12 @@
 	$(".devourBurger").on('click', function() {
 		var id = $(this).data('burgerName');
 		$.ajax('/', {
-			type: "DELETE"
+			type: "UPDATE"
 		}).then(function() {
 			console.log("deleted " id;);
 			var newLi = $("<li>");
 			newLi.text(id).appendTo('#eatenList');
-		})
-
+		});
 	})
 
 

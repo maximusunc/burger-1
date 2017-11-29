@@ -1,15 +1,31 @@
-<!DOCTYPE html>
-<html lang = 'en'>
-<head>
-	<title>Eat-Da-Burger</title>
-	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<link rel='stylesheet' type='text/css' href='assets/css/burger_style.css'>
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-	  crossorigin="anonymous"></script>
-</head>
-<body>
-{{{body}}}
-</body>
-</html>
+<div class = 'container'>
+	<div class = 'row'>
+		<div class = 'col-sm-4'>
+			<ul id = 'uneatenList'>
+				{{#each burgers}}
+					{{#unless devoured}}
+						{{>burgers/burger-block devoured = false}}
+					{{/unless}}
+				{{/each}}		
+			</ul>
+		</div>
+		<div class = 'col-sm-4'>
+			<img id="burger-img" src = "../../assets/img/burger.png">
+			<h1>Please submit your burger</h1>
+			<textarea id="newBurger" placeholder="Type your burger name here." style = "width: 100%; height: 40px"></textarea>
+			<button type="submit" id="submit" class='btn btn-submit'>Submit Your Burger</button>
+		</div>
+		<div class= 'col-sm-4'>
+			<h3>Devoured Burgers</h3>
+			<ul id = 'eatenList'>
+				{{#each burgers}}
+					{{#if devoured}}
+						{{>burgers/burger-block devoured = true}}
+					{{/if}}
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+</div>
+
+
