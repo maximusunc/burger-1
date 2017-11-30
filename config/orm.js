@@ -14,7 +14,7 @@ module.exports = function(method, name, callback) {
 			query = "INSERT INTO burgers (burger_name) VALUES (" + name + ")";
 			break;
 		case 'updateOne':
-			query = "UPDATE burgers SET devoured = true WHERE id = '" + name + "'";
+			query = "UPDATE burgers SET devoured = !devoured WHERE id = '" + name + "'";
 			break;
 		}
 	connection.query(query, queryFunction);
