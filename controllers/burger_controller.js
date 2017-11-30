@@ -12,13 +12,14 @@ router.get('/index', function(req,res) {
     });
 });
 router.post('/api/burgers', function(req,res) {
-	burger.insertOne(req.body.name, function(result) {
+	burger.insertOne("'" + req.body.name + "'", function(result) {
+		console.log(req.body.name);
 		res.json({id: result.insertID});
 	});
 });
 
 router.put("/api/burgers/:id", function(req,res) {
-	burger.updateOne(req.body.name, function(result) {
+	burger.updateOne(req.body.id, function(result) {
 		if(result.changedRows == 0) {
 			return res.status(404).end();
 		} else {

@@ -1,7 +1,7 @@
 var orm = require('../config/orm.js');
 var burger = {
-	updateOne: function(name, callback) {
-		orm("updateOne", name, callback);
+	updateOne: function(id, callback) {
+		orm("updateOne", id, callback);
 	},
 	insertOne: function(name, callback) {
 		orm("insertOne", name, callback);
