@@ -20,6 +20,7 @@ $(function() {
 			type: "PUT"
 		}).then(function() {
 			console.log("devoured ", id);
+			location.reload();
 		});
 	})
 
