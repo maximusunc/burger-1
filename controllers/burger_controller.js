@@ -20,6 +20,7 @@ router.post('/api/burgers', function(req,res) {
 
 router.put("/api/burgers/:id", function(req,res) {
 	var id = req.params.id;
+	console.log('deleted id ', id);
 	burger.updateOne(id, function(result) {
 		if(result.changedRows == 0) {
 			return res.status(404).end();
@@ -28,4 +29,12 @@ router.put("/api/burgers/:id", function(req,res) {
 		}
 	});
 });
+router.delete("/api/burgers/:id", function(req,res) {
+	var id = req.params.id;
+	console.log('deleted id ', id);
+	burger.deleteOne(id, function(result) {
+		console.log(result.changedRows);
+		res.status(200).end();
+	})
+})
 module.exports = router;

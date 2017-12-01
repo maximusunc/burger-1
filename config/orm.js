@@ -16,6 +16,9 @@ module.exports = function(method, name, callback) {
 		case 'updateOne':
 			query = "UPDATE burgers SET devoured = !devoured WHERE id = '" + name + "'";
 			break;
-		}
+		case 'deleteOne':
+			query = "DELETE FROM burgers WHERE id = '" + name + "'";
+			break;
+	}
 	connection.query(query, queryFunction);
 }

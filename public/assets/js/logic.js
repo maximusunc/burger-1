@@ -8,10 +8,9 @@ $(function() {
 		$.ajax("/api/burgers", {
 			type: "POST",
 			data: newBurger
-		}).then(
-			function() {
-				console.log("new burger named " + newBurger + " added");
-				location.reload();
+		}).then(function() {
+			console.log("new burger named " + newBurger + " added");
+			location.reload();
 		})
 	});
 	$(".devourBurger").on('click', function(event) {
@@ -23,6 +22,13 @@ $(function() {
 			location.reload();
 		});
 	})
-
-
+	$(".deleteButton").on('click', function(event) {
+		var id = $(this).data('id');
+		$.ajax('/api/burgers/' + id, {
+			type: "DELETE"
+		}).then(function() {
+			console.log("deleted ", id);
+			location.reload();
+		});
+	});
 })

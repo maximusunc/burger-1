@@ -8,6 +8,9 @@ var burger = {
 	},
 	selectAll: function(callback) {
 		orm("selectAll", "*", callback);
+	},
+	deleteOne: function(id, callback) {
+		orm("deleteOne", id, callback);
 	}
 }
 module.exports = burger;
