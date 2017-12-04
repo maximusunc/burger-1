@@ -35,3 +35,7 @@ textarea {
 	position: relative;
 	left: -4.5%;
 }
+#textAreaHeader{
+    position: relative;
+    right: -6%;
+}
