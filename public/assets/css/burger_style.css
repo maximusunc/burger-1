@@ -20,11 +20,11 @@ body {
 }
 #eaten {
     left: 1.5%;
-    bottom: 287px;
+    bottom: 199px;
 }
 #uneaten {
     right: 1.5%;
-    bottom: 290px;
+    bottom: 200px;
 }
 #eatenHeader,
 #uneatenHeader {
