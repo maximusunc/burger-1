@@ -1,13 +1,13 @@
 <div class = 'container'>
-	<div class='row'>
-		<h1 class='header col-sm-4 col-sm-offset-4'>Eat-Da-Burger</h1>
-		<div class = 'col-sm-4 col-sm-offset-4'>
-			<img id="burger-img" src = "../../assets/img/burger.png">
-		</div>
-	</div>
+	{{!-- <div class='row'> --}}
+		{{!-- <h1 class='header col-sm-4 col-sm-offset-4'>Bob's Burgers</h1> --}}
+		{{!-- <div class = 'col-sm-4 col-sm-offset-4'> --}}
+			{{!-- <img id="burger-img" src = "../../assets/img/burger.png"> --}}
+		{{!-- </div> --}}
+	{{!-- </div> --}}
 	<div class = 'row'>
 		<div class = 'col-sm-4'>
-			<h3>Burgers to devour.</h3>
+			<h3 id='uneatenHeader'>Burger of the day.    </h3>
 			<ul id = 'uneatenList'>
 				{{#each burgers}}
 					{{#unless devoured}}
@@ -18,12 +18,12 @@
 		</div>
 
 		<div class = 'col-sm-4'>
-			<h1>Please submit your burger</h1>
-			<textarea id="newBurger" placeholder="Type your burger name here." style = "width: 100%; height: 40px"></textarea>
-			<button type="submit" id="submit" class='btn btn-submit'>Submit Your Burger</button>
+			<h1>Please submit your burger of the day!</h1>
+			<textarea id="newBurger" class= 'textArea' placeholder="Type your burger pun here." style = "width: 100%; height: 40px"></textarea>
+			<button type="submit" id="submit" class='btn btn-submit'>Submit</button>
 		</div>
-		<div class= 'col-sm-4'>
-			<h3>Devoured Burgers</h3>
+		<div class= 'col-sm-4'  id='eaten'>
+			<h3 id='eatenHeader'>Eaten Burgers</h3>
 			<ul id = 'eatenList'>
 				{{#each burgers}}
 					{{#if devoured}}

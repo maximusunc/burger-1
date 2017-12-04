@@ -1,6 +1,3 @@
-.li {
-	font-size: 1.5em;
-}
 img {
 	width: 100%;
 }
@@ -10,4 +7,31 @@ img {
 }
 body {
 	background-color: aliceblue;
+	background-image: url("../img/background.png");
+	background-size: 100%;
+}
+.container {
+    width: 100%;
+    position: absolute;
+    top: 36%;
+}
+#eaten {
+    position: relative;
+    left: 2%;
+}
+#eatenHeader,
+#uneatenHeader {
+	position: relative;
+    left: 6%;
+}
+h1 {
+	width: 79%;
+}
+textarea {
+	position: relative;
+    left: -4.5%;
+}
+.btn-submit {
+	position: relative;
+	left: -4.5%;
 }
