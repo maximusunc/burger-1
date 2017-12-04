@@ -15,15 +15,24 @@ body {
     position: absolute;
     top: 36%;
 }
+#eaten, #uneaten {
+	position: relative;
+}
 #eaten {
-    position: relative;
-    left: 2%;
+    left: 1.5%;
+    bottom: 287px;
+}
+#uneaten {
+    right: 1.5%;
+    bottom: 290px;
 }
 #eatenHeader,
 #uneatenHeader {
 	position: relative;
     left: 6%;
+    font-weight: bold;
 }
+
 h1 {
 	width: 79%;
 }
@@ -38,4 +47,11 @@ textarea {
 #textAreaHeader{
     position: relative;
     right: -6%;
+}
+#inputArea {
+	position: relative;
+	top: -114px;
+}
+li {
+	font-size: 1em;
 }
