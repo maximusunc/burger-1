@@ -10,39 +10,19 @@ body {
 	background-image: url("../img/background.png");
 	background-size: 100%;
 }
-.container {
-    width: 100%;
-    position: absolute;
-    top: 36%;
-}
-#eaten, #uneaten {
-	position: relative;
-}
 #eaten {
     left: 1.5%;
-    bottom: 199px;
+    position: absolute;
+    left: 68%;
+    top: 22%;
 }
 #uneaten {
-    right: 1.5%;
-    bottom: 200px;
+    position: absolute;
+    left: 0%;
+    top: 22%;
 }
-#eatenHeader,
-#uneatenHeader {
-	position: relative;
-    left: 6%;
-    font-weight: bold;
-}
-
 h1 {
 	width: 79%;
-}
-textarea {
-	position: relative;
-    left: -4.5%;
-}
-.btn-submit {
-	position: relative;
-	left: -4.5%;
 }
 #textAreaHeader{
     position: relative;
@@ -52,6 +32,12 @@ li {
 	font-size: 1em;
 }
 #inputArea {
-	position: relative;
-	top: 80px;
+	position: absolute;
+	left:32%;
+	top:40%;
+}
+#eatenHeader,
+#uneatenHeader {
+	position:relative;
+	left: 8.5%;
 }
