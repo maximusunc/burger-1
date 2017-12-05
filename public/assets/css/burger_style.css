@@ -51,3 +51,7 @@ textarea {
 li {
 	font-size: 1em;
 }
+#inputArea {
+	position: relative;
+	top: 80px;
+}
