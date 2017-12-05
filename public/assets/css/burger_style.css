@@ -1,6 +1,9 @@
 img {
 	width: 100%;
 }
+ul {
+	list-style: none;
+}
 .header {
 	text-align: center;
 	font-size:3em;
@@ -39,5 +42,5 @@ li {
 #eatenHeader,
 #uneatenHeader {
 	position:relative;
-	left: 8.5%;
+	left: 6.5%;
 }
